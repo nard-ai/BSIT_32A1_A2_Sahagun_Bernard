@@ -1,0 +1,193 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+/* General Styling */
+body {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Soft pink gradient */
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Fixed height issue */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Centering the To-Do List */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Title */
+h1 {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Input Field & Buttons */
+.input-group {
+    display: flex;
+    flex-wrap: wrap; /* Allows elements to wrap on small screens */
+    gap: 10px;
+}
+
+.input-group input,
+.input-group select {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding-top: 5px;
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+.input-group button {
+    background-color: #ff6b81; /* Soft red */
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    flex-shrink: 0;
+    padding: 10px 15px;
+}
+
+.input-group button:hover {
+    background-color: #ff4757; /* Darker red */
+}
+
+/* Task List */
+.list-group {
+    padding: 0;
+}
+
+.list-group-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 5px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    min-height: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Completed Task */
+.list-group-item-success {
+    background-color: #d4edda !important;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+/* Overdue Task */
+.list-group-item-danger {
+    background-color: #f8d7da !important;
+    color: #721c24 !important;
+}
+
+/* Editable Fields */
+.editable {
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 6px;
+    max-width: 100%;
+    word-wrap: break-word;
+    flex-grow: 1;
+}
+
+.editable:hover {
+    background-color: #f1f1f1;
+}
+
+/* Buttons */
+button {
+    margin-left: 5px;
+    border-radius: 6px;
+    font-weight: bold;
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+
+.btn-success {
+    background-color: #2ecc71; /* Green */
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #27ae60;
+}
+
+.btn-danger {
+    background-color: #e74c3c; /* Red */
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* 📌 FULL RESPONSIVENESS */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .list-group-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .list-group-item div {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 5px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group input,
+    .input-group select {
+        width: 100%;
+    }
+
+    .input-group button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .list-group-item {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

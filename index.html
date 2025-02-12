@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic To-Do List</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">To-Do List</h1>
+        <div class="input-group mb-3">
+            <input type="text" id="taskInput" class="form-control" placeholder="Add a new task">
+            <input type="date" id="dueDateInput" class="form-control">
+            <select id="priorityInput" class="form-select">
+                <option value="1">High</option>
+                <option value="2">Medium</option>
+                <option value="3" selected>Low</option>
+            </select>
+            <button class="btn btn-primary" id="addTaskButton">Add Task</button>
+        </div>
+        <ul class="list-group" id="taskList"></ul>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
